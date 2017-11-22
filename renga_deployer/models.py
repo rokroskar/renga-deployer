@@ -57,9 +57,6 @@ class Context(db.Model, Timestamp):
         default=load_jwt)
     """JWT with which the context has been created."""
 
-    creator = db.Column(String)
-    """Creator of the context."""
-
     @classmethod
     def create(cls, spec=None):
         """Create a new context."""
